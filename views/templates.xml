@@ -1,0 +1,245 @@
+<odoo>
+
+      <template id="index"> 
+        <t t-call="website.layout">
+            <t t-set="title">Atma Jaya - Dashboard</t>
+            <style>
+                .formRight select {
+                    background: none repeat scroll 0 0 #FFFFFF;
+                    border: 1px solid #E5E5E5;
+                    border-radius: 25px 25px 25px 25px;
+                    box-shadow: 0 0 10px #e8e8e8 inset;
+                    height: 35px;
+                    margin: 0 0 0 25px;
+                    padding: 8px;
+                    padding-top: 4px;
+                    width: 110px; 
+                }
+                .box{
+                  box-sizing: border-box;
+                  border: 3px solid transparent;
+                  background-clip:padding-box;
+                }
+                #chartdiv {
+                  width: 100%;
+                  height: 220px;
+                }
+                .head_conf
+                {
+                    color:white !important;
+                }
+                .head_conf .col-md-12
+                {
+                    margin-top:5px;
+                }
+                .head_conf .head_title
+                {
+                    color:white !important;
+                }
+                .head_conf hr
+                {
+                    color: white;
+                    border-top: 1px solid #f6f6f6;
+                }
+                .divdashboard  {
+                    font-family: Quicksand !important;
+                }
+                h1, h2, h3, h4, h5, h6 
+                {
+                    font-family: Quicksand !important;
+                }
+                /* The switch_input - the box around the slider_input */
+                .switch_input {
+                    top:5px;
+                    position: relative;
+                    display: inline-block;
+                    width: 30px;
+                    height: 14px;
+                }
+
+                /* Hide default HTML checkbox */
+                .switch_input input {
+                  opacity: 0;
+                  width: 0;
+                  height: 0;
+                }
+
+                /* The slider_input */
+                .slider_input {
+                  position: absolute;
+                  cursor: pointer;
+                  top: 0;
+                  left: 0;
+                  right: 0;
+                  bottom: 0;
+                  background-color: white;
+                  -webkit-transition: .4s;
+                  transition: .4s;
+                }
+
+                .slider_input:before {
+                    position: absolute;
+                    content: "";
+                    height: 10px;
+                    width: 9px;
+                    left: 4px;
+                    bottom: 2px;
+                    background-color: #707070;
+                    -webkit-transition: .4s;
+                    transition: .4s;
+                }
+
+                input:checked + .slider_input {
+                  background-color: white;
+                }
+
+                input:focus + .slider_input {
+                  box-shadow: 0 0 1px white;
+                }
+
+                input:checked + .slider_input:before {
+                  -webkit-transform: translateX(26px);
+                  -ms-transform: translateX(26px);
+                  transform: translateX(26px);
+                  left: -10px;
+                background-color: #E97118;
+                }
+
+                /* Rounded slider_inputs */
+                .slider_input.round {
+                  border-radius: 34px;
+                }
+
+                .slider_input.round:before {
+                  border-radius: 50%;
+                }
+            </style>
+            <div class="row divdashboard">
+                <div class="col-md-3 pt-4 pl-4 pr-4" style="background-color:#747474;"> 
+                    <div class="col-md-12">
+                        <span class="head_conf">
+                          <!--    <t t-foreach="sumber_air" t-as="sa">
+                                <p><t t-esc="sa"/></p>
+                            </t> -->
+                            <h6 class="head_title mb-3"><b>Data sumber air</b></h6> 
+
+                            <div class="col-md-12">
+                                <label class="switch_input mt-1">
+                                  <input type="checkbox"/>
+                                  <span class="slider_input round"></span>
+                                </label>
+                                <span class="ml-1"> Sumber air cuci baju </span>
+                            </div>
+                            <div class="col-md-12">
+                                <label class="switch_input mt-1">
+                                  <input type="checkbox"/>
+                                  <span class="slider_input round"></span>
+                                </label>
+                                <span class="ml-1"> Sumber air cuci kendaraan </span>
+                            </div>
+                            <div class="col-md-12">
+                                <label class="switch_input mt-1">
+                                  <input type="checkbox"/>
+                                  <span class="slider_input round"></span>
+                                </label>
+                                <span class="ml-1"> Sumber air mandi </span>
+                            </div>
+                            <div class="col-md-12">
+                                <label class="switch_input mt-1">
+                                  <input type="checkbox"/>
+                                  <span class="slider_input round"></span>
+                                </label>
+                                <span class="ml-1"> Sumber air masak </span>
+                            </div>
+                            <div class="col-md-12">
+                                <label class="switch_input mt-1">
+                                  <input type="checkbox"/>
+                                  <span class="slider_input round"></span>
+                                </label>
+                                <span class="ml-1"> Sumber air minum </span>
+                            </div>
+
+                            <hr></hr>
+                        </span>
+                    </div> 
+                </div>
+                <div class="col-md-4 pt-3 pb-3" style="background-color:#F2F2F2;border-radius: 15px;"> 
+                    <div class="col-md-12">
+                        <h6 class="pull-left"><b>Provinsi <span class="prov_txt">Kalimantan Barat</span></b></h6>
+                    </div>
+                    <div class="col-md-12" style="display: inline-block;">
+                        provinsi  <span class="prov_txt">Kalimantan Barat</span> memiliki luas wilayah sebesar 147.307 km2.
+                    </div>  
+                    <div class="row pt-2 pl-3 pr-3">
+                        <div class="col-md-6 p-4 box" style="background-color:white;border-radius: 15px;">
+                            <center>
+                                 <h6 style="font-size: 14px;">LUAS WILAYAH SAWIT</h6>
+                                 <h2><b>1,8 Juta ha</b></h2>
+                             </center>
+                             <span style="font-size:12px;">*berdasarkan sensus 2011</span>
+                        </div>
+                        <div class="col-md-6 p-4 box" style="background-color:white;border-radius: 15px;">
+                            <center>
+                                <h6 style="font-size: 14px;">JUMLAH PENDUDUK</h6>
+                                <h2><b>4,477 Juta* </b></h2>
+                            </center>
+                            <span style="font-size:12px;">*berdasarkan sensus 2011</span>
+                        </div>
+                        <div class="col-md-6 p-4 box" style="background-color:white;border-radius: 15px;">
+                            <center>
+                                <h6 style="font-size: 14px;">JUMLAH PENDUDUK</h6>
+                                <h2><b>4,477 Juta* </b></h2>
+                            </center>
+                            <span style="font-size:12px;">*berdasarkan sensus 2011</span>
+                        </div>
+                        <div class="col-md-6 p-4 box" style="background-color:white;border-radius: 15px;">
+                            <center>
+                                <h6 style="font-size: 14px;">JUMLAH PENDUDUK</h6>
+                                <h2><b>4,477 Juta* </b></h2>
+                            </center>
+                            <span style="font-size:12px;">*berdasarkan sensus 2011</span>
+                        </div>
+                        <div class="col-md-6 p-4 box" style="background-color:white;border-radius: 15px;">
+                            <center>
+                                <h6 style="font-size: 14px;">JUMLAH PENDUDUK</h6>
+                                <h2><b>4,477 Juta* </b></h2>
+                            </center>
+                            <span style="font-size:12px;">*berdasarkan sensus 2011</span>
+                        </div>
+                    </div>
+                    <div class="row pt-2 pl-3 pr-3">
+                        <div class="col-md-12 p-4" style="background-color:white;border-radius: 15px;">
+                             <h6>PENDAPATAN PERKAPITA</h6>
+                             <center>
+                                 <h2><b>Rp 420.831</b></h2>
+                            </center>
+                            <span style="font-size:12px;">*berdasarkan sensus 2011</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-5">
+                    <div id="container_map"></div>
+                </div>
+            </div>
+        </t> 
+        <script type="text/javascript" src="/dashboard_web/static/src/js/highmaps.js"></script>
+        <script type="text/javascript" src="/dashboard_web/static/src/js/exporting.js"></script>
+        <script type="text/javascript" src="/dashboard_web/static/src/js/id-all.js"></script>
+        <script type="text/javascript" src="/dashboard_web/static/src/js/data_map.js?v=1.24"></script>
+<!--         <script src="https://cdn.amcharts.com/lib/4/core.js"></script>
+        <script src="https://cdn.amcharts.com/lib/4/charts.js"></script> 
+        <script type="text/javascript" src="/dashboard_web/static/src/js/data-donut.js"></script> -->
+    </template>
+
+<!--     <template id="assets_frontend"
+          name="Module name frontend assets"
+          inherit_id="website.assets_frontend">
+        <xpath  expr="." position="inside">
+            <script type="text/javascript" src="https://code.highcharts.com/maps/highmaps.js"></script>
+            <script type="text/javascript" src="https://code.highcharts.com/maps/modules/exporting.js"></script>
+            <script type="text/javascript" src="https://code.highcharts.com/mapdata/countries/id/id-all.js"></script>
+            <script type="text/javascript" src="/dashboard_web/static/src/js/data_map.js"></script>
+        </xpath>
+    </template> -->
+ 
+</odoo>

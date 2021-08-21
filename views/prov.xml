@@ -1,0 +1,46 @@
+<odoo>
+  <data> 
+    <!-- Client Tree View -->
+    <record model="ir.ui.view" id="dashboard_web_prov_tree">
+      <field name="name">dashboard_web.prov_tree</field>
+      <field name="model">dashboard_web.provinsi</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="Id_map"/>
+          <field name="Nama_Provinsi"/>
+        </tree>
+      </field>
+    </record>
+
+    <!-- Client Form View -->
+    <record model="ir.ui.view" id="dashboard_web_prov_form">
+      <field name="name">dashboard_web.prov_form</field>
+      <field name="model">dashboard_web.provinsi</field>
+      <field name="arch" type="xml">
+        <form string="Room">
+          <sheet>
+            <group>
+                <field name="Id_map"/>
+            </group> 
+            <group>
+             <field name="Nama_Provinsi" />
+            </group> 
+          </sheet>
+        </form>
+      </field>
+    </record>
+    <!-- Client Action Window -->
+    <record model="ir.actions.act_window" id="dashboard_web_prov_action_window">
+      <field name="name">Provinsi</field>
+      <field name="res_model">dashboard_web.provinsi</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem name="Dashboard Web" id="dashboard_web.root_menu" />
+
+    <menuitem name="Master Data" id="dashboard_web.master_data" parent="dashboard_web.root_menu" />
+
+      <!-- Menu Item -->
+    <menuitem name="Provinsi" id="dashboard_web.provinsi"  parent="dashboard_web.master_data" action="dashboard_web_prov_action_window"  sequence="1"/>
+  </data>
+</odoo>

@@ -1,0 +1,3 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_dashboard_web_provinsi,dashboard_web.provinsi,model_dashboard_web_provinsi,,1,1,1,1
+access_dashboard_web_sumber_air,dashboard_web.sumber_air,model_dashboard_web_sumber_air,,1,1,1,1
