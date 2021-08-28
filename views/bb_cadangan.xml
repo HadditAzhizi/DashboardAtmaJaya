@@ -1,9 +1,9 @@
 <odoo>
   <data>  
     <!-- Client Tree View -->
-    <record model="ir.ui.view" id="dashboard_web_sa_tree">
-      <field name="name">dashboard_web.sa_tree</field>
-      <field name="model">dashboard_web.sumber_air</field>
+    <record model="ir.ui.view" id="dashboard_web_bb_cadangan_tree">
+      <field name="name">dashboard_web.bb_cadangan_tree</field>
+      <field name="model">dashboard_web.bb_cadangan</field>
       <field name="arch" type="xml">
         <tree>
           <field name="provinsi"/>
@@ -15,9 +15,9 @@
     </record>
 
     <!-- Client Form View -->
-    <record model="ir.ui.view" id="dashboard_web_sa_form">
-      <field name="name">dashboard_web.sa_form</field>
-      <field name="model">dashboard_web.sumber_air</field>
+    <record model="ir.ui.view" id="dashboard_web_bb_cadangan_form">
+      <field name="name">dashboard_web.bb_cadangan_form</field>
+      <field name="model">dashboard_web.bb_cadangan</field>
       <field name="arch" type="xml">
         <form string="Room">
           <sheet>
@@ -34,9 +34,9 @@
       </field>
     </record>
     <!-- Client Action Window -->
-    <record model="ir.actions.act_window" id="dashboard_web_sumber_air_action_window">
-      <field name="name">Sumber Air</field>
-      <field name="res_model">dashboard_web.sumber_air</field>
+    <record model="ir.actions.act_window" id="dashboard_web_bb_cadangan_action_window">
+      <field name="name">Bahan Bakar Cadangan</field>
+      <field name="res_model">dashboard_web.bb_cadangan</field>
       <field name="view_mode">tree,form</field>
     </record>
 
@@ -47,6 +47,6 @@
     <menuitem name="Survey" id="dashboard_web.survey" parent="dashboard_web.root_menu" />
 
       <!-- Menu Item -->
-    <menuitem name="Sumber Air" id="dashboard_web.sumber_air"  parent="dashboard_web.survey" action="dashboard_web_sumber_air_action_window"  sequence="1"/>
+    <menuitem name="Bahan Bakar Cadangan" id="dashboard_web.bb_cadangan"  parent="dashboard_web.survey" action="dashboard_web_bb_cadangan_action_window"  sequence="3"/>
   </data>
 </odoo>

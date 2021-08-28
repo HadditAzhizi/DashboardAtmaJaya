@@ -20,13 +20,19 @@
     'version': '0.1',
 
     # any module necessary for this one to work correctly
-    'depends': ['base','website'],
+    'depends': ['base','website','web','bus'],
 
     # always loaded
     'data': [
         'security/ir.model.access.csv',
         'views/templates.xml',
         'views/sumber_air.xml',
+        'views/bb_utama.xml',
+        'views/bb_cadangan.xml',
+        'views/pemilahan_sampah.xml',
+        'views/perlakuan_sb3.xml',
+        'views/perlakuan_uts.xml',
+        'views/sumber_pu.xml',
         'views/prov.xml'
     ],
     # only loaded in demonstration mode
