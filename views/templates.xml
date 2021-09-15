@@ -25,6 +25,11 @@
                 border: 3px solid transparent;
                 background-clip:padding-box;
               }
+              .box_div{
+                box-sizing: border-box;
+                border: 8px solid transparent;
+                background-clip:padding-box;
+              }
               #chartdiv {
                 width: 100%;
                 height: 220px;
@@ -48,11 +53,11 @@
               }
 
               .switch_input {
-                  top:5px;
+                  top:8px;
                   position: relative;
                   display: inline-block;
-                  width: 30px;
-                  height: 14px;
+                  width: 23px;
+                  height: 10px;
               }
 
               /* Hide default HTML checkbox */
@@ -78,8 +83,8 @@
               .slider_input:before {
                   position: absolute;
                   content: "";
-                  height: 10px;
-                  width: 9px;
+                  height: 6px;
+                  width: 6px;
                   left: 4px;
                   bottom: 2px;
                   background-color: #707070;
@@ -99,7 +104,7 @@
                 -webkit-transform: translateX(26px);
                 -ms-transform: translateX(26px);
                 transform: translateX(26px);
-                left: -10px;
+                left: -12px;
               background-color: #E97118;
               }
 
@@ -111,66 +116,116 @@
               .slider_input.round:before {
                 border-radius: 50%;
               }
+              rect
+              {
+                fill:#CAD2D3 !important;
+              }
+              .title_conf
+              {
+                font-size:12px;
+              }
           </style>
           <div class="row divdashboard">
-              <div class="col-md-3 pt-4 pl-4 pr-4 pb-4" style="background-color:#747474;"> 
+              <div class="col-md-2 pt-4 pl-1 pr-0 pb-4" style="background-color:#747474;max-height: 600px !important;overflow: auto !important;"> 
                   <div class="col-md-12">
-                      <span class="head_conf">
-                        <!--    <t t-foreach="sumber_air" t-as="sa">
-                              <p><t t-esc="sa"/></p>
-                          </t> -->
-                          <h6 class="head_title mb-3"><b>Data sumber air</b></h6> 
-
-                          <div class="col-md-12">
-                              <label class="switch_input mt-1">
-                                <input type="checkbox" id="jen1" value="1" checked="true" class="oncheck_config"/>
-                                <span class="slider_input round"></span>
-                              </label>
-                              <span class="ml-1"> Sumber air cuci baju </span>
-                          </div>
-                          <div class="col-md-12">
+                      <span class="head_conf"> 
+                          <!-- <div class="col-md-12">
                               <label class="switch_input mt-1">
                                 <input type="checkbox" id="jen2" value="2" checked="true" class="oncheck_config"/>
                                 <span class="slider_input round"></span>
                               </label>
-                              <span class="ml-1"> Sumber air cuci kendaraan </span>
+                              <span class="ml-1 title_conf"> Sumber air cuci kendaraan </span>
                           </div>
                           <div class="col-md-12">
                               <label class="switch_input mt-1">
                                 <input type="checkbox" id="jen3" value="3" checked="true" class="oncheck_config"/>
                                 <span class="slider_input round"></span>
                               </label>
-                              <span class="ml-1"> Sumber air mandi </span>
+                              <span class="ml-1 title_conf"> Sumber air mandi </span>
                           </div>
                           <div class="col-md-12">
                               <label class="switch_input mt-1">
                                 <input type="checkbox" id="jen4" value="4" checked="true" class="oncheck_config"/>
                                 <span class="slider_input round"></span>
                               </label>
-                              <span class="ml-1"> Sumber air masak </span>
+                              <span class="ml-1 title_conf"> Sumber air masak </span>
                           </div>
                           <div class="col-md-12">
                               <label class="switch_input mt-1">
                                 <input type="checkbox" id="jen5" value="5" checked="true" class="oncheck_config"/>
                                 <span class="slider_input round"></span>
                               </label>
-                              <span class="ml-1"> Sumber air minum </span>
-                          </div> 
-                          <hr></hr>
-                          <h6 class="head_title mb-3"><b>Bahan Bakar</b></h6> 
+                              <span class="ml-1 title_conf"> Sumber air minum </span>
+                          </div>  
                           <div class="col-md-12">
                               <label class="switch_input mt-1">
                                 <input type="checkbox" id="jen6" value="6" class="oncheck_config"/>
                                 <span class="slider_input round"></span>
                               </label>
-                              <span class="ml-1"> Bahan Bakar Utama </span>
+                              <span class="ml-1 title_conf"> Bahan Bakar Utama </span>
                           </div> 
                           <div class="col-md-12">
                               <label class="switch_input mt-1">
                                 <input type="checkbox" id="jen7" value="7" class="oncheck_config"/>
                                 <span class="slider_input round"></span>
                               </label>
-                              <span class="ml-1"> Bahan Bakar Cadangan </span>
+                              <span class="ml-1 title_conf"> Bahan Bakar Cadangan </span>
+                          </div>  
+                          <div class="col-md-12">
+                              <label class="switch_input mt-1">
+                                <input type="checkbox" id="jen12" value="12" class="oncheck_config"/>
+                                <span class="slider_input round"></span>
+                              </label>
+                              <span class="ml-1 title_conf"> Asap kendaraan memanaskan suhu bumi </span>
+                          </div> 
+                          <div class="col-md-12">
+                              <label class="switch_input mt-1">
+                                <input type="checkbox" id="jen13" value="13" class="oncheck_config"/>
+                                <span class="slider_input round"></span>
+                              </label>
+                              <span class="ml-1 title_conf"> Membakar sampah mencemari udara </span>
+                          </div> 
+                          <div class="col-md-12">
+                              <label class="switch_input mt-1">
+                                <input type="checkbox" id="jen14" value="14" class="oncheck_config"/>
+                                <span class="slider_input round"></span>
+                              </label>
+                              <span class="ml-1 title_conf"> Membiarkan air mengalir menyebabkan pemborosan air </span>
+                          </div> 
+                          <div class="col-md-12">
+                              <label class="switch_input mt-1">
+                                <input type="checkbox" id="jen15" value="15" class="oncheck_config"/>
+                                <span class="slider_input round"></span>
+                              </label>
+                              <span class="ml-1 title_conf"> Menggunakan kendaraan umum berarti menghemat bahan bakar </span>
+                          </div> 
+                          <div class="col-md-12">
+                              <label class="switch_input mt-1">
+                                <input type="checkbox" id="jen16" value="16" class="oncheck_config"/>
+                                <span class="slider_input round"></span>
+                              </label>
+                              <span class="ml-1 title_conf"> Menghemat listrik berarti menghemat bahan bakar </span>
+                          </div> 
+                          <div class="col-md-12">
+                              <label class="switch_input mt-1">
+                                <input type="checkbox" id="jen17" value="17" class="oncheck_config"/>
+                                <span class="slider_input round"></span>
+                              </label>
+                              <span class="ml-1 title_conf"> Ruta perlu menyediakan area resapan air </span>
+                          </div> 
+                          <div class="col-md-12">
+                              <label class="switch_input mt-1">
+                                <input type="checkbox" id="jen18" value="18" class="oncheck_config"/>
+                                <span class="slider_input round"></span>
+                              </label>
+                              <span class="ml-1 title_conf"> Sampah berbahan kimia sebaiknya dikubur </span>
+                          </div> 
+                          <div class="col-md-12">
+                              <label class="switch_input mt-1">
+                                <input type="checkbox" id="jen19" value="19" class="oncheck_config"/>
+                                <span class="slider_input round"></span>
+                              </label>
+                              <span class="ml-1 title_conf"> Sampah tidak perlu dipisah </span>
                           </div> 
                           <hr></hr>
                           <div class="col-md-12">
@@ -178,50 +233,52 @@
                                 <input type="checkbox" id="jen8" value="8" class="oncheck_config"/>
                                 <span class="slider_input round"></span>
                               </label>
-                              <span class="ml-1"> Pemilahan Sampah </span>
+                              <span class="ml-1 title_conf"> Pemilahan Sampah </span>
                           </div> 
-<!--                           <div class="col-md-12">
-                              <label class="switch_input mt-1">
-                                <input type="checkbox" id="jen8" value="8" class="oncheck_config"/>
-                                <span class="slider_input round"></span>
-                              </label>
-                              <span class="ml-1"> Pengetahuan Perilaku Lingkungan Hidup </span>
-                          </div>  -->
                           <div class="col-md-12">
                               <label class="switch_input mt-1">
                                 <input type="checkbox" id="jen9" value="9" class="oncheck_config"/>
                                 <span class="slider_input round"></span>
                               </label>
-                              <span class="ml-1"> Perlakuan Sampah B3 </span>
+                              <span class="ml-1 title_conf"> Perlakuan Sampah B3 </span>
                           </div> 
                           <div class="col-md-12">
                               <label class="switch_input mt-1">
                                 <input type="checkbox" id="jen10" value="10" class="oncheck_config"/>
                                 <span class="slider_input round"></span>
                               </label>
-                              <span class="ml-1"> Perlakuan Utama Terhadap Sampah </span>
+                              <span class="ml-1 title_conf"> Perlakuan Utama Terhadap Sampah </span>
                           </div>  
                           <div class="col-md-12">
                               <label class="switch_input mt-1">
                                 <input type="checkbox" id="jen11" value="11" class="oncheck_config"/>
                                 <span class="slider_input round"></span>
                               </label>
-                              <span class="ml-1"> Sumber Penerangan Utama </span>
-                          </div> 
+                              <span class="ml-1 title_conf"> Sumber Penerangan Utama </span>
+                          </div>  -->
                       </span>
                   </div> 
               </div>
-              <div class="col-md-4 pt-3 pb-3" style="background-color:#F2F2F2;border-radius: 15px;"> 
+              <div class="col-md-3 pt-3 pb-3 pl-0 pr-0" style="background-color:#F2F2F2;border-radius: 15px;"> 
                   <div class="col-md-12">
                       <h6 class="pull-left"><b>Provinsi <span class="prov_txt">Aceh</span></b></h6>
                   </div>
-                  <div class="col-md-12" style="display: inline-block;">
-                     <!--  provinsi  <span class="prov_txt">Kalimantan Barat</span> memiliki luas wilayah sebesar 147.307 km2. -->
+                  <div class="col-md-12" style="display: inline-block;"> 
+                    <div class="row p-2" id="tmp_nilai">  
+                       <!--  <div class="col-md-6 p-3 box" id="tmpjen" style="background-color:white;border-radius: 15px;">
+                          <center><h6 style="font-size: 12px;">Bahan Bakar Cadangan</h6>
+                          <h3><b>90%</b></h3>
+                          <h6 style="font-size: 12px;">mengolah sampah B3 dengan cara didaur ulang/diolah.</h6></center>
+                        </div>
+                        <div class="col-md-6 p-3 box" id="tmpjen" style="background-color:white;border-radius: 15px;">
+                          <center><h6 style="font-size: 12px;">Bahan Bakar Cadangan</h6>
+                          <h3><b>90%</b></h3>
+                          <h6 style="font-size: 12px;">mengolah sampah B3 dengan cara didaur ulang/diolah.</h6></center>
+                        </div> -->
+                    </div>
                   </div>  
-                  <div class="row pt-2 pl-3 pr-3" id="tmp_nilai"> 
-                  </div>
               </div>
-              <div class="col-md-5">
+              <div class="col-md-7 pl-0">
                   <div id="container_map"></div>
               </div>
           </div>

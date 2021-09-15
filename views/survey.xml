@@ -1,0 +1,53 @@
+<odoo>
+  <data> 
+    <!-- Client Tree View -->
+    <record model="ir.ui.view" id="dashboard_web_survey_tree">
+      <field name="name">dashboard_web.survey_tree</field>
+      <field name="model">dashboard_web.survey</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="survey"/>
+        </tree>
+      </field>
+    </record>
+
+    <!-- Client Form View -->
+    <record model="ir.ui.view" id="dashboard_web_survey_form">
+      <field name="name">dashboard_web.survey_form</field>
+      <field name="model">dashboard_web.survey</field>
+      <field name="arch" type="xml">
+        <form string="Room">
+          <sheet>
+            <group>
+                <field name="survey"/>
+            </group>
+               <notebook>
+                  <page string="Isi Survey" name="page_isi"> 
+                    <field name="isi_survey" widget="" context="{'default_jenis_survey':survey}">
+                        <tree editable="bottom">
+                          <field name="provinsi"/>
+                          <field name="kategori" domain="[('jenis_survey', '=', context.get('default_jenis_survey'))]"/>
+                          <field name="persentase"/>
+                        </tree>
+                    </field>
+                  </page>
+              </notebook>
+          </sheet>
+        </form>
+      </field>
+    </record>
+    <!-- Client Action Window -->
+    <record model="ir.actions.act_window" id="dashboard_web_survey_action_window">
+      <field name="name">Survey</field>
+      <field name="res_model">dashboard_web.survey</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem name="Dashboard Web" id="dashboard_web.root_menu" />
+
+    <menuitem name="Master Data" id="dashboard_web.master_data" parent="dashboard_web.root_menu" sequence="1"/>
+
+      <!-- Menu Item -->
+    <menuitem name="Survey" id="dashboard_web.survey"  parent="dashboard_web.root_menu" action="dashboard_web_survey_action_window"  sequence="2"/>
+  </data>
+</odoo>

@@ -38,9 +38,9 @@
 
     <menuitem name="Dashboard Web" id="dashboard_web.root_menu" />
 
-    <menuitem name="Master Data" id="dashboard_web.master_data" parent="dashboard_web.root_menu" />
+    <menuitem name="Master Data" id="dashboard_web.master_data" parent="dashboard_web.root_menu" sequence="1"/>
 
       <!-- Menu Item -->
-    <menuitem name="Provinsi" id="dashboard_web.provinsi"  parent="dashboard_web.master_data" action="dashboard_web_prov_action_window"  sequence="1"/>
+    <menuitem name="Provinsi" id="dashboard_web.provinsi"  parent="dashboard_web.master_data" action="dashboard_web_prov_action_window"  sequence="3"/>
   </data>
 </odoo>

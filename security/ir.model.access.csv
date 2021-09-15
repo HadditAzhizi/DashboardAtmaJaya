@@ -1,9 +1,6 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
 access_dashboard_web_provinsi,dashboard_web.provinsi,model_dashboard_web_provinsi,,1,1,1,1
-access_dashboard_web_sumber_air,dashboard_web.sumber_air,model_dashboard_web_sumber_air,,1,1,1,1
-access_dashboard_web_bb_utama,dashboard_web.bb_utama,model_dashboard_web_bb_utama,,1,1,1,1
-access_dashboard_web_bb_cadangan,dashboard_web.bb_cadangan,model_dashboard_web_bb_cadangan,,1,1,1,1
-access_dashboard_web_pemilahan_sampah,dashboard_web.pemilahan_sampah,model_dashboard_web_pemilahan_sampah,,1,1,1,1
-access_dashboard_web_perlakuan_sb3,dashboard_web.perlakuan_sb3,model_dashboard_web_perlakuan_sb3,,1,1,1,1
-access_dashboard_web_perlakuan_uts,dashboard_web.perlakuan_uts,model_dashboard_web_perlakuan_uts,,1,1,1,1
-access_dashboard_web_sumber_pu,dashboard_web.sumber_pu,model_dashboard_web_sumber_pu,,1,1,1,1
+access_dashboard_web_jenis_survey,dashboard_web.jenis_survey,model_dashboard_web_jenis_survey,,1,1,1,1
+access_dashboard_web_kategori_survey,dashboard_web.kategori_survey,model_dashboard_web_kategori_survey,,1,1,1,1
+access_dashboard_web_survey,dashboard_web.survey,model_dashboard_web_survey,,1,1,1,1
+access_dashboard_web_isi_survey,dashboard_web.isi_survey,model_dashboard_web_isi_survey,,1,1,1,1

@@ -26,13 +26,9 @@
     'data': [
         'security/ir.model.access.csv',
         'views/templates.xml',
-        'views/sumber_air.xml',
-        'views/bb_utama.xml',
-        'views/bb_cadangan.xml',
-        'views/pemilahan_sampah.xml',
-        'views/perlakuan_sb3.xml',
-        'views/perlakuan_uts.xml',
-        'views/sumber_pu.xml',
+        'views/jenis_survey.xml',
+        'views/kategori_survey.xml',
+        'views/survey.xml',
         'views/prov.xml'
     ],
     # only loaded in demonstration mode

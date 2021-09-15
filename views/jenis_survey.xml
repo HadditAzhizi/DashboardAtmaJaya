@@ -1,0 +1,58 @@
+<odoo>
+  <data> 
+    <!-- Client Tree View -->
+    <record model="ir.ui.view" id="dashboard_web_jenis_survey_tree">
+      <field name="name">dashboard_web.jenis_survey_tree</field>
+      <field name="model">dashboard_web.jenis_survey</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="nama"/>
+          <field name="is_publish"/>
+          <field name="template" />
+        </tree>
+      </field>
+    </record>
+
+    <!-- Client Form View -->
+    <record model="ir.ui.view" id="dashboard_web_jenis_survey_form">
+      <field name="name">dashboard_web.jenis_survey_form</field>
+      <field name="model">dashboard_web.jenis_survey</field>
+      <field name="arch" type="xml">
+        <form string="Room">
+          <sheet>
+            <group>
+                <field name="nama"/>
+            </group> 
+            <group>
+             <field name="is_publish" />
+             <field name="template" />
+            </group> 
+             <notebook>
+                <page string="Kategori" name="page_isi"> 
+                  <field name="kategori" widget="">
+                      <tree editable="bottom">
+                        <field name="nama"/>
+                        <field name="is_seleksi"/>
+                      </tree>
+                  </field>
+                </page>
+            </notebook>
+          </sheet>
+        </form>
+      </field>
+    </record>
+    <!-- Client Action Window -->
+    <record model="ir.actions.act_window" id="dashboard_web_jenis_survey_action_window">
+      <field name="name">Jenis Survey</field>
+      <field name="res_model">dashboard_web.jenis_survey</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem name="Dashboard Web" id="dashboard_web.root_menu" />
+
+    <menuitem name="Master Data" id="dashboard_web.master_data" parent="dashboard_web.root_menu" />
+
+      <!-- Menu Item -->
+    <menuitem name="Jenis Survey" id="dashboard_web.jenis_survey"  parent="dashboard_web.master_data" action="dashboard_web_jenis_survey_action_window"  sequence="1"/>
+  </data>
+</odoo>

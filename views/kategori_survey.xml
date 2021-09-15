@@ -1,0 +1,50 @@
+<odoo>
+  <data> 
+    <!-- Client Tree View -->
+    <record model="ir.ui.view" id="dashboard_web_kategori_survey_tree">
+      <field name="name">dashboard_web.kategori_survey_tree</field>
+      <field name="model">dashboard_web.kategori_survey</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="jenis_survey"/>
+          <field name="nama"/>
+          <field name="is_seleksi" />
+        </tree>
+      </field>
+    </record>
+
+    <!-- Client Form View -->
+    <record model="ir.ui.view" id="dashboard_web_kategori_survey_form">
+      <field name="name">dashboard_web.kategori_survey_form</field>
+      <field name="model">dashboard_web.kategori_survey</field>
+      <field name="arch" type="xml">
+        <form string="Room">
+          <sheet>
+            <group>
+                <field name="jenis_survey"/>
+            </group> 
+            <group>
+             <field name="nama" />
+            </group> 
+            <group>
+             <field name="is_seleksi" />
+            </group> 
+          </sheet>
+        </form>
+      </field>
+    </record>
+    <!-- Client Action Window -->
+    <record model="ir.actions.act_window" id="dashboard_web_kategori_survey_action_window">
+      <field name="name">Kategori Survey</field>
+      <field name="res_model">dashboard_web.kategori_survey</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem name="Dashboard Web" id="dashboard_web.root_menu" />
+
+    <menuitem name="Master Data" id="dashboard_web.master_data" parent="dashboard_web.root_menu" sequence="1"/>
+
+      <!-- Menu Item -->
+    <menuitem name="Kategori Survey" id="dashboard_web.kategori_survey"  parent="dashboard_web.master_data" action="dashboard_web_kategori_survey_action_window"  sequence="2"/>
+  </data>
+</odoo>
